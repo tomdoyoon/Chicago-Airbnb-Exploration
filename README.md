@@ -2,12 +2,12 @@
 
 # Abstract
 
-This analysis attempts to explore the features and drivers of Airbnb daily prices and monthly availability. As the economy continues to redefine its new post-COVID norm, Airbnb arbitrage and investment ideas have flooded the internet. The search term “Airbnb” has hit a new all time high interest in the summer of 2022 and “Airbnb Arbitrage” reaching highs towards the end of 2022. To obtain a better idea of what features are driving pricing decisions (supplier) and availability (buyer) of listing, the study uses clustering do identify groups of listings, geographic data, review information, host information, and property features.
+This analysis attempts to explore the features and drivers of Airbnb nightly prices and monthly availability. As the economy continues to redefine its new post-COVID norm, Airbnb arbitrage and other short-term rental investment ideas have flooded the internet. The search term “Airbnb” had hit a new all time high interest in the summer of 2022 and “Airbnb Arbitrage” reached highs towards the end of 2022. To obtain a better idea of what features are driving pricing decisions (supplier) and availability (buyer) of listings, the study uses clustering to identify similar groups of listings, geographic data, review ratings, host information, and property features.
 
-Chicago Airbnb listing data was extracted from Inside Airbnb (last pulled 12/20/22). Natural Language Processing and K-Means clustering were used in conjunction to extract data from free form text fields and identify groups of properties with similar amenities, neighborhood description, and property features. Additionally, the report includes the methods behind cleaning outlier price data, and the various one-hot encoding and dummy variables to prepare the dataset for statistical analysis and machine learning application. 
+Chicago Airbnb listing data was extracted from Inside Airbnb (last pulled 12/20/22). Natural Language Processing and K-Means clustering were used in conjunction to extract data from free form text fields and identify groups of properties with similar amenities, neighborhood description, and property features. Additionally, the report includes the methods behind cleaning outlier price data, and the various one-hot encoding and dummy variables to prepare the dataset for data visualization, statistical analysis, and machine learning application. 
 
 
-Total accommodation is the strongest positively correlated feature with nightly price in both listings with reviews and without reviews, .52 and .33, respectively. Having a shared bathroom is the strongest negatively correlated feature with nightly price, -.42 and -.35, for listings with reviews and without reviews, respectively. For listings without reviews, the total listings under the host becomes very important. Total listings is -.47 correlated with monthly availability for listings without reviews, but drops out of importance when a listing has reviews.
+Total accommodation is the strongest positively correlated feature with nightly price, in both listings with reviews and without reviews .52 and .33, respectively. Having a shared bathroom is the strongest negatively correlated feature with nightly price, -.42 and -.35 for listings with reviews and without reviews, respectively. For listings without reviews, the total listings under a host becomes very important. Total listings is -.47 correlated with monthly availability for listings without reviews, but drops out of importance when a listing has reviews.
 
 
 # Introduction
@@ -27,11 +27,11 @@ As some listings have not had any reviews up until the time of pulling data, I h
 
 Please read the full report for further insights about the observations and findings.
 
-- Listings with reviews that can accommodate  2, 4, and 10 have the steepest negative slope when comparing miles away from Lincoln Park and nightly price. This is similar to listings without reviews where listings that accommodate 2, 3, and 4 have strong negative slopes.
+- Listings with reviews that can accommodate  2, 4, and 10 have the steepest negative slope when comparing miles away from Lincoln Park and nightly price. This is similar to listings without reviews where listings that accommodate 2, 3, and 4 have strong negative slopes. For example, a property that can accommodate 2-4 will have a bigger drop in nightly price per mile away from Lincoln Park.
 - The correlation between amount of beds and nightly price, while positively correlated (.45, .23 for listings with reviews and without reviews, respectively), flattens out after 5 beds.
 - A similar effect is observable in bedrooms, where while positively correlated with price (.49, .28 for listing with reviews and without reviews, respectively), flattens out after 5-6 bedrooms.
-- There does not seem to be strong positive relationships with monthly availability for listings with reviews. The top positively correlated factor has a correlation of .13. There appears to be a weak positive correlation with hosts verified using emails and phones, and accommodation with monthly availability for listings without reviews. This is understandable as listings that have no reviews and a lot of accommodations may not be popular booking options.
-- Listings with reviews do not have strong negatively correlated features with monthly availability either. The strongest negative correlation is -.12.
+- There does not seem to be strong positive relationships with monthly availability for listings with reviews. The top positively correlated factor has a correlation of .13. There appears to be a weak positive correlation with hosts verified using emails and phones and accommodation with monthly availability, for listings without reviews. This is understandable as listings that have no reviews and a lot of accommodations may not be popular booking options as a consumer may have some skepticism.
+- Listings with reviews do not have strong negatively correlated features with monthly availability, either. The strongest negative correlation is -.12.
 
 
 
